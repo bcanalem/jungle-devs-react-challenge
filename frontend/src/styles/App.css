@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+:root {
+  --grey-24: #3d3d3d;
+  --grey-88: #dfdfdf;
+  --green-primary: #00c88c;
+  --purple-secondary: #5e20a4;
+  --gradient: linear-gradient(
+    314.72deg,
+    #c86dd7 -1.5%,
+    #7e49c3 39.43%,
+    #5912ac 86.02%
+  );
+}
+
+.body {
+  background-color: #f2f2f2;
+  width: 100vw;
+
+  text-align: center;
+}
+
+/* Standards ========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+
+  color: var(--grey-24);
+  margin-top: 0;
+}
+
+a {
+  color: var(--purple-secondary);
+}
+
+h1,
+.h1 {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+h3,
+.h3 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h4,
+.h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h5,
+.h5,
+::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+a {
+  font-size: 16px;
+  line-height: 24px;
+
+  text-decoration: underline;
+}
+
+p,
+.medium {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.large {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.x-small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+button,
+.button {
+  background-color: var(--green-primary);
+  border: none;
+  border-radius: 4px;
+
+  padding: 12px 22px;
+
+  color: white;
+}
+
+hr {
+  border: 1px solid #dfdfdf;
+  width: 90%;
+}
+
+/* Header ============================== */
+
+header {
+  background-image: url(../images/a8afc96eccb6f1885700ab5d6e2e58ef.png),
+    var(--gradient);
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 16px;
+  height: 540px;
+}
+
+header h2,
+header p,
+header a {
+  color: white;
+}
+
+#badge {
+  margin-top: -16px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.div-play-button {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 60px;
+}
+
+.div-play-button a {
+  margin-left: 16px;
+}
+
+/* Main ================================= */
+
+main div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 16px;
+}
+
+main div img {
+  max-width: 100%;
+  margin-bottom: 24px;
+}
+
+/* Available Nanny Section ========================= */
+
+.available-nanny-section {
+  background-color: white;
+  border-bottom: 1px solid #dfdfdf;
+
+  padding: 32px;
+}
+
+.profile-image {
+  width: 56px;
+  border-radius: 50%;
+  border: 4px solid white;
+  filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.2));
+  margin-bottom: 16px;
+}
+
+.available-nanny-section a {
+  padding: 0 50px;
+  margin-bottom: 12px;
+}
+
+.available-nanny-section h5 {
+  color: black;
+  margin-bottom: 0;
+}
+
+/* Get Started Section ====================== */
+
+.get-started-section h3 {
+  margin-bottom: 16px;
+  padding: 0 50px;
+}
+
+/* Form Section ============================== */
+
+.form-section form {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section form .input {
+  padding: 14px 20px;
+  margin: 5px 0;
+
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+}
+
+.form-section form .button {
+  margin-top: 13px;
+}
+
+/* Payment Section ========================== */
+
+.payment-section h3 {
+  margin-top: 30px;
+  padding: 0 50px;
+}
+
+/* About App Section ========================= */
+
+.about-app-section h3 {
+  padding: 0 50px;
+}
+
+/* Footer ============================== */
+
+footer {
+  background-color: white;
+  padding-bottom: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer button {
+  background-color: unset;
+  border-radius: 0;
+
+  padding: 0;
+}
+
+footer h3 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+.purple-button {
+  background-color: var(--purple-secondary);
+  display: flex;
+  align-items: center;
+
+  border-radius: 4px;
+  padding: 18px 24px;
+  margin: 24px;
+}
+
+.purple-button div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+
+  text-align: left;
+}
+
+.logo {
+  width: 64px;
+  margin: 48px 0 32px 0;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  padding: 0 30px;
+}
+
+.footer-menu a {
+  margin: 8px 16px;
+  text-decoration: none;
+
+  color: var(--grey-24);
+}
+
+.social-buttons {
+  margin: 24px 0;
+  display: flex;
+  column-gap: 8px;
+}
