@@ -20,6 +20,14 @@
   text-align: center;
 }
 
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: initial;
+}
+
 /* Standards ========================== */
 
 h1,
@@ -73,6 +81,7 @@ h5,
 ::placeholder {
   font-size: 14px;
   line-height: 20px;
+  text-decoration: none;
 }
 
 a {
@@ -125,6 +134,8 @@ hr {
 header {
   background-image: url(../images/a8afc96eccb6f1885700ab5d6e2e58ef.png),
     var(--gradient);
+
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
 
@@ -149,13 +160,22 @@ header a {
 .header-top {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.sign-in-button {
+  margin: 0 16px 0 23px;
+}
+
+header h2 {
+  padding: 0 25px;
 }
 
 .div-play-button {
+  align-self: center;
   display: flex;
   align-items: center;
-
-  margin-bottom: 60px;
+  margin: 70px 0;
 }
 
 .div-play-button a {
@@ -168,6 +188,9 @@ main div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+main div.section {
   padding: 64px 16px;
 }
 
@@ -179,6 +202,9 @@ main div img {
 /* Available Nanny Section ========================= */
 
 .available-nanny-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
   border-bottom: 1px solid #dfdfdf;
 
@@ -207,7 +233,6 @@ main div img {
 
 .get-started-section h3 {
   margin-bottom: 16px;
-  padding: 0 50px;
 }
 
 /* Form Section ============================== */
@@ -219,8 +244,12 @@ main div img {
   flex-direction: column;
 }
 
+input {
+  height: 48px;
+}
+
 .form-section form .input {
-  padding: 14px 20px;
+  padding: 0 20px;
   margin: 5px 0;
 
   background-color: #ffffff;
@@ -290,6 +319,12 @@ footer p {
   text-align: left;
 }
 
+.lower-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .logo {
   width: 64px;
   margin: 48px 0 32px 0;
@@ -315,4 +350,186 @@ footer p {
   margin: 24px 0;
   display: flex;
   column-gap: 8px;
+}
+
+/* Responsive =============== */
+
+@media (min-width: 800px) {
+  .desktop-only {
+    display: initial;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  hr {
+    margin: 0 328px;
+    width: auto;
+  }
+
+  /* Header ==================== */
+
+  header {
+    justify-content: start;
+    background-position: 0 40%;
+  }
+
+  .header-top-left {
+    display: flex;
+  }
+
+  .top-menu {
+    display: flex;
+    column-gap: 28px;
+    margin-left: 37px;
+
+    align-self: center;
+  }
+
+  .header-main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    margin: 110px 228px 0 128px;
+    column-gap: 220px;
+
+    text-align: left;
+  }
+
+  .header-main h2 {
+    padding: 0 90px 0 0;
+  }
+
+  .div-play-button {
+    margin: 70px 0 0 0;
+  }
+
+  /* Main ==================== */
+
+  main div.section {
+    padding: 64px 228px;
+  }
+
+  /* Available Nanny Section ========================= */
+
+  .available-nanny-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .available-nanny-section a {
+    margin-left: 32px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .available-nanny-section h4 {
+    margin-left: 2px;
+    margin-bottom: -4px;
+  }
+
+  .profile-image {
+    margin-bottom: 0;
+  }
+
+  /* Get Started Section ====================== */
+
+  .get-started-section {
+    flex-direction: row-reverse;
+    text-align: left;
+    column-gap: 56px;
+  }
+
+  .get-started-section div {
+    align-items: flex-start;
+  }
+
+  .get-started-section img {
+    margin-right: -100px;
+  }
+
+  /* Form Section ============================== */
+
+  .form-section form {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 12px;
+  }
+
+  .form-section form .input {
+    width: 232px;
+  }
+
+  .form-section form .button {
+    width: 96px;
+    margin: 5px 0;
+  }
+
+  /* Payment Section ========================== */
+
+  .payment-section {
+    flex-direction: row;
+    column-gap: 44px;
+    align-items: end;
+
+    text-align: left;
+  }
+
+  .payment-section div {
+    align-items: flex-start;
+    row-gap: 40px;
+  }
+
+  .payment-section div * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* About App Section ========================= */
+
+  .about-app-section div {
+    margin: 0 100px 64px 100px;
+    row-gap: 40px;
+  }
+
+  .about-app-section div * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Daily Diary Section ========================= */
+
+  .daily-diary-section {
+    margin: 0 100px;
+  }
+
+  /* Footer ========================= */
+
+  footer {
+    padding-bottom: 32px;
+  }
+
+  .lower-div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin: 60px 0;
+  }
+
+  .lower-div * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-menu a {
+    margin: 8px 15px;
+  }
+
+  .social-buttons {
+    justify-self: end;
+  }
 }
