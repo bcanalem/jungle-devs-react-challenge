@@ -1,4 +1,8 @@
+import React, { useState } from 'react';
+import api from './services/api';
+
 import './styles/App.css';
+
 import Badge from './images/Badge.svg';
 import ImageHeader from './images/ImageHeader.png';
 import PlayButton from './images/Play button.svg';
@@ -14,6 +18,26 @@ import Facebook from './images/Facebook.svg';
 import Twitter from './images/Twitter.svg';
 
 function App() {
+  const [formName, setFormName] = useState('');
+  const [formEmail, setFormEmail] = useState('');
+
+  async function handleFormSend(event) {
+    if (formName === '' || formEmail === '') {
+      return;
+    }
+
+    event.preventDefault();
+
+    const data = {
+      name: formName,
+      email: formEmail,
+    };
+
+    await api.post('.', data);
+
+    alert('Thank you! We’ll update you as soon as a share becomes available.');
+  }
+
   return (
     <div className="body">
       <header>
@@ -56,7 +80,7 @@ function App() {
 
           <img
             src={ImageHeader}
-            alt="Manage Your Nanny Share Image"
+            alt="Manage Your Nanny Share"
             className="desktop-only"
           />
         </div>
@@ -77,8 +101,8 @@ function App() {
           </h5>
         </div>
         <div className="get-started-section  section">
-          <span>1</span>
-          <img src={GetStartedSectionImage} alt="Get Started Image" />
+          <span></span>
+          <img src={GetStartedSectionImage} alt="Get Started" />
           <div>
             <h3>
               Share your home,
@@ -106,9 +130,34 @@ function App() {
             becomes available in your area!
           </p>
           <form>
-            <input type="text" className="input" placeholder="Your name" />
-            <input type="email" className="input" placeholder="Your email" />
-            <input type="submit" className="button" value="Send" />
+            <input
+              type="text"
+              className="input"
+              placeholder="Your name"
+              required
+              value={formName}
+              onChange={(event) => {
+                setFormName(event.target.value);
+              }}
+            />
+            <input
+              type="email"
+              className="input"
+              placeholder="Your email"
+              required
+              value={formEmail}
+              onChange={(event) => {
+                setFormEmail(event.target.value);
+              }}
+            />
+            <input
+              type="submit"
+              className="button"
+              value="Send"
+              onClick={(event) => {
+                handleFormSend(event);
+              }}
+            />
           </form>
         </div>
         <hr />
