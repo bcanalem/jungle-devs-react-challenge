@@ -77,6 +77,7 @@ function App() {
           </h5>
         </div>
         <div className="get-started-section  section">
+          <span>1</span>
           <img src={GetStartedSectionImage} alt="Get Started Image" />
           <div>
             <h3>

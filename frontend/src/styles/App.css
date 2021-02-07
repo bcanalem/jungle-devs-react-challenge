@@ -171,8 +171,14 @@ header h2 {
   padding: 0 25px;
 }
 
+.header-main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .div-play-button {
-  align-self: center;
+  /* align-self: center; */
   display: flex;
   align-items: center;
   margin: 70px 0;
@@ -354,7 +360,7 @@ footer p {
 
 /* Responsive =============== */
 
-@media (min-width: 800px) {
+@media (min-width: 1024px) {
   .desktop-only {
     display: initial;
   }
@@ -388,27 +394,36 @@ footer p {
   }
 
   .header-main {
-    display: flex;
-    align-items: flex-end;
-    justify-content: start;
-    margin: 110px 228px 0 128px;
-    column-gap: 220px;
+    display: grid;
+    grid-template-columns: 6fr 5fr 1fr;
+    margin: 110px 8vw 0 8vw;
+    /* column-gap: 25px; */
 
     text-align: left;
   }
 
   .header-main h2 {
+    margin-top: 28px;
     padding: 0 90px 0 0;
   }
 
-  .div-play-button {
-    margin: 70px 0 0 0;
+  .header-main > div {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .header-main .div-play-button {
+    margin: 0;
+  }
+
+  .header-main img {
+    justify-self: right;
   }
 
   /* Main ==================== */
 
   main div.section {
-    padding: 64px 228px;
+    padding: 64px 16vw;
   }
 
   /* Available Nanny Section ========================= */
@@ -437,17 +452,22 @@ footer p {
   /* Get Started Section ====================== */
 
   .get-started-section {
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: 1fr 5fr 6fr;
     text-align: left;
-    column-gap: 56px;
+  }
+
+  main div.section.get-started-section {
+    padding: 64px 8vw;
   }
 
   .get-started-section div {
     align-items: flex-start;
+    padding-right: 40px;
   }
 
   .get-started-section img {
-    margin-right: -100px;
+    order: 2;
   }
 
   /* Form Section ============================== */
@@ -470,9 +490,9 @@ footer p {
   /* Payment Section ========================== */
 
   .payment-section {
-    flex-direction: row;
-    column-gap: 44px;
-    align-items: end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
 
     text-align: left;
   }
@@ -508,7 +528,7 @@ footer p {
   /* Footer ========================= */
 
   footer {
-    padding-bottom: 32px;
+    padding: 0 8vw 32px 8vw;
   }
 
   .lower-div {
