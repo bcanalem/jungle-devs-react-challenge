@@ -3,7 +3,9 @@ import api from './services/api';
 
 import './styles/App.css';
 
-import Badge from './images/Badge.svg';
+import HeaderTop from './components/HeaderTop';
+import FooterMenu from './components/FooterMenu';
+
 import ImageHeader from './images/ImageHeader.png';
 import PlayButton from './images/Play button.svg';
 import ProfileImage from './images/3ee1d7a99b08f4684290bf4c91bd6fd4.png';
@@ -12,10 +14,6 @@ import PaymentSectionImage from './images/ImageSection3.png';
 import AboutAppSectionImage from './images/ImageSection4.png';
 import DailyDiarySectionImage from './images/ImageSection5.png';
 import Calendar from './images/Icon.svg';
-import Logo from './images/Logo.svg';
-import Instagram from './images/Instagram.svg';
-import Facebook from './images/Facebook.svg';
-import Twitter from './images/Twitter.svg';
 
 function App() {
   const [formName, setFormName] = useState('');
@@ -41,28 +39,7 @@ function App() {
   return (
     <div className="body">
       <header>
-        <div className="header-top">
-          <div className="header-top-left">
-            <img src={Badge} alt="Hapu Badge" id="badge" />
-            <div className="top-menu desktop-only">
-              <a href="" className="h5">
-                Create Your Nanny Share
-              </a>
-              <a href="" className="h5">
-                Browse Shares
-              </a>
-              <a href="" className="h5">
-                Our Story
-              </a>
-            </div>
-          </div>
-          <div>
-            <button>Become a Nanny Share Host</button>
-            <a href="" className="desktop-only h5 sign-in-button">
-              Sign In
-            </a>
-          </div>
-        </div>
+        <HeaderTop />
         <div className="header-main">
           <div>
             <div>
@@ -219,7 +196,8 @@ function App() {
           </div>
         </button>
         <a href="">Or browse local nanny-shares</a>
-        <div className="lower-div">
+        <FooterMenu />
+        {/* <div className="lower-div">
           <img src={Logo} alt="Hapu Logo" className="logo" />
           <div className="footer-menu">
             <a href="" className="h5">
@@ -250,7 +228,7 @@ function App() {
         <hr />
         <p className="x-small">
           Copyright © 2017 Hapu PTY Limited All rights reserved
-        </p>
+        </p> */}
       </footer>
     </div>
   );

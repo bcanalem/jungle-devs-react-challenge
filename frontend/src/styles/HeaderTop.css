@@ -1,0 +1,25 @@
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sign-in-button {
+  margin: 0 16px 0 23px;
+}
+
+/* Responsive ================ */
+
+@media (min-width: 1024px) {
+  .header-top-left {
+    display: flex;
+  }
+
+  .top-menu {
+    display: flex;
+    column-gap: 28px;
+    margin-left: 37px;
+
+    align-self: center;
+  }
+}
